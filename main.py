@@ -1,7 +1,6 @@
 import json
 
 import discord
-from discord import DMChannel
 
 json_open = open('./info.json', 'r')
 json_load = json.load(json_open)
@@ -12,7 +11,8 @@ async def on_ready():
     print('ログインしました')
     print('-'*40)
 
-# DMにメッセージが送信されたら、テキストや画像を取得して、channel に send する
+# DMにメッセージが送信されたら、テキストや画像を取得して
+# channel に send する
 @client.event
 async def on_message(message):
     if message.author.bot:
