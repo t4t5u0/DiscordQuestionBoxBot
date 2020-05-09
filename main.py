@@ -29,7 +29,7 @@ async def on_message(message):
     if len(text):
         with open('./store.csv', 'w') as f:
             writer = csv.writer(f)
-            writer.writerow([message.id,f'{message.name}#{message.discriminator}',message.content])
+            writer.writerow([message.id ,message.author ,message.content])
         await to_send_channel.send(text)
     # 受信したファイルを取得する
     for file_ in message.attachments:
