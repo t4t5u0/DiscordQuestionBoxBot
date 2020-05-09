@@ -27,7 +27,7 @@ async def on_message(message):
     print(f'message:{message}')
     text = message.content
     if len(text):
-        with open('./store.csv', 'w') as f:
+        with open('./store.csv', 'a') as f:
             writer = csv.writer(f)
             writer.writerow([message.id ,message.author ,message.content])
         await to_send_channel.send(text)
