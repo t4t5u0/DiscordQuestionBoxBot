@@ -1,0 +1,4 @@
+{
+    "token":"BOT TOKEN",
+    "channel_id":チャンネルID(int),
+}
