@@ -31,6 +31,6 @@ info.json にBotトークンとチャンネルIDを書き込みます
 $ git clone https://github.com/t4t5u0/question_box.git
 $ cd question_bot
 $ vim info.json
-$ python main.py &
+$ nohup python main.py &
 ```
 してください。環境によっては`python3` を指定しなければいけないことがあります。
