@@ -1,5 +1,7 @@
 # サーバ情報なのでプッシュしない
 info.json
+nohup.out
+store.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
