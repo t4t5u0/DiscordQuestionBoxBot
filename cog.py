@@ -8,7 +8,7 @@ import discord
 from discord.ext import commands
 
 
-class QuestionBotCog(commands.Cog):
+class QuestionBotCog(commands.Cog, name="QuestionBox"):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
         with open('./info.json', 'r') as f:
