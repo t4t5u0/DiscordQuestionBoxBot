@@ -1,9 +1,9 @@
 .vscode
 
 # サーバ情報なのでプッシュしない
-info.json
+# info.json
 nohup.out
-store.csv
+# store.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
