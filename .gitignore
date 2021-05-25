@@ -1,3 +1,5 @@
+.vscode
+
 # サーバ情報なのでプッシュしない
 info.json
 nohup.out
