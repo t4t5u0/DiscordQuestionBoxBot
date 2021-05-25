@@ -26,7 +26,7 @@ class QuestionBotCog(commands.Cog):
         to_send_channel: discord.TextChannel = self.bot.get_channel(
             self.channel_id)
         if not to_send_channel:
-            await message.author.send('転送対象のテキストチャンネルが見つかりません。転送したいチャンネルで`/set`と送信してください。')
+            return await message.author.send('転送対象のテキストチャンネルが見つかりません。転送したいチャンネルで`/set`と送信してください。')
         text = message.content
         if text:
             with open('./store.csv', 'a') as f:
