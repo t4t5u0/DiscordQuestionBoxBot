@@ -17,6 +17,7 @@ class QuestionBotCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
+        # botには反応しない
         if message.author.bot:
             return
         # DM限定
