@@ -1,38 +1,33 @@
 # QuestionBoxBot
 
-Python3 質問箱風 Discord Botです
+質問箱風のDiscord Botです
 
 ## DEMO
 
 add later...
 
 ## Features
-BotにDMを送ると特定のチャンネルに匿名化してメッセージを送信してくれます
-これにより、質問に対する心理的安全性を確保する目的があります。
-質問が公開になることで、同じ質問をする人を減らせる。回答できる人が増える。
-情報共有になるなど、メリットがたくさんあります。
+BotにDMを送ると、匿名化して特定のチャンネルにメッセージを転送してくれます。
+これにより、Discord内で質問をすることに対する心理的安全性を確保する目的があります。
+要するに、質問をすることのハードルを下げることが目的です。
+質問が公開されることで、同じ質問をする人を減らせる。回答できる人が増える。
+情報共有になる。など、メリットがたくさんあります。
 
-## Requirments
-依存パッケージは
+DM質問問題を解決できたらと思います。
 
-- discord.py
-- discord
-- aiohttp
 
-## Installattion
-```bash
-$ pip install -r requirements.txt
-```
-で取得してください。環境によっては`pip3`を指定しなければいけないことがあります。
-
+## required
+- Python 3.9
 ## Usage
-GCPなどで、VMインスタンスを立てます
-info.json にBotトークンとチャンネルIDを書き込みます
+GCPなどでVMインスタンスを立てます。
+info.json にBotトークンと転送したいチャンネルIDを書き込みます。
+チャンネルIDは、後で`/set`コマンドを用いて実装する場合は適当な数字で大丈夫です。
 
 ```bash
-$ git clone https://github.com/t4t5u0/question_box.git
+$ git clone https://github.com/t4t5u0/DiscordQuestionBoxBot.git
 $ cd question_bot
+$ pip install -r requirements.txt
 $ vim info.json
 $ nohup python main.py &
 ```
-してください。環境によっては`python3` を指定しなければいけないことがあります。
+してください。環境によっては`python3` や `pip3` を指定しなければいけないことがあります。
