@@ -1,4 +1,4 @@
-# question_box
+# QuestionBoxBot
 
 Python3 質問箱風 Discord Botです
 
