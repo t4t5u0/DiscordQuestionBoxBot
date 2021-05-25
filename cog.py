@@ -13,7 +13,7 @@ class QuestionBotCog(commands.Cog):
         self.bot = bot
         with open('./info.json', 'r') as f:
             self.json_load = json.load(f)
-        self.channel_id = int(self.json_load['channel_id'])
+        self.channel_id: int = self.json_load['channel_id']
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
@@ -25,6 +25,8 @@ class QuestionBotCog(commands.Cog):
             return
         to_send_channel: discord.TextChannel = self.bot.get_channel(
             self.channel_id)
+        if not to_send_channel:
+            await message.author.send('転送対象のテキストチャンネルが見つかりません。転送したいチャンネルで`/set`と送信してください。')
         text = message.content
         if text:
             with open('./store.csv', 'a') as f:
