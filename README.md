@@ -4,7 +4,9 @@
 
 ## DEMO
 
-add later...
+![1857374d031d0808bbefd12628f2ba1a.png (642×394)](https://i.gyazo.com/1857374d031d0808bbefd12628f2ba1a.png)
+
+![cb4d8b8ee6ae9c07791be2a387687be0.png (375×249)](https://i.gyazo.com/cb4d8b8ee6ae9c07791be2a387687be0.png)
 
 ## Features
 BotにDMを送ると、匿名化して特定のチャンネルにメッセージを転送してくれます。
