@@ -23,7 +23,10 @@ class UserHelp(commands.DefaultHelpCommand):
         return f'{string} というコマンドは見つかりませんでした'
 
     def get_ending_note(self):
-        return ("質問箱Bot")
+        return (
+            "質問箱Bot\n",
+            "BotのDMにメッセージや画像を送ると、指定されたチャンネルに匿名化されて送信されます。"
+        )
 
 
 def main():
