@@ -50,12 +50,9 @@ class QuestionBotCog(commands.Cog, name="QuestionBox"):
         "質問を転送するチャンネルを設定します"
         channel_id: int = ctx.channel.id
         self.channel_id = channel_id
-        with open('./info.json', 'r') as f:
+        with open('./info.json', 'r+') as f:
             updated = json.load(f, object_pairs_hook=OrderedDict)
-            print(updated)
-        with open('./info.json', 'w') as f:
             updated['channel_id'] = channel_id
-            print(updated)
             json.dump(updated, f, indent=4, ensure_ascii=False)
         await ctx.send('メッセージを転送するチャンネルをこのチャンネルに変更しました')
 
