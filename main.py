@@ -34,11 +34,11 @@ def main():
         json_load = json.load(f)
     TOKEN = json_load['token']
 
-    prefix = '/'
+    prefix = '~'
     bot = Bot(
         command_prefix=prefix,
         help_command=UserHelp(),
-        activity=discord.Game(name="send DM or /help")
+        activity=discord.Game(name=f"send DM or {prefix}help")
     )
     bot.load_extension('cog')
     bot.run(TOKEN)
